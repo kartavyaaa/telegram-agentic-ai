@@ -12,9 +12,10 @@ from telegram.ext import (
 )
 
 from app.bot.handlers import (
+    reset_command,
     start_command,
     message_handler,
-    help_command
+    help_command,
 )
 
 from app.core.config import settings
@@ -22,8 +23,11 @@ from app.core.config import settings
 import sys
 print(sys.executable)
 
+from app.memory.database import initialize_database
+
 def main():
 
+    initialize_database()
 
     app = (
         Application.builder()
@@ -33,6 +37,7 @@ def main():
 
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("reset", reset_command))
 
     app.add_handler(
         MessageHandler(

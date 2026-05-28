@@ -11,25 +11,35 @@ client = OpenAI(
 class AIService:
 
     @staticmethod
-    async def generate_response(user_message: str) -> str:
+    async def generate_response(
+        user_message: str,
+        history: list
+    ) -> str:
+
+        messages = [
+            {
+                "role": "system",
+                "content":
+                (
+                    "You are Kartavya's personal AI assistant. "
+                    "You are intelligent, concise, and practical."
+                )
+            }
+        ]
+
+        messages.extend(history)
+
+        messages.append(
+            {
+                "role": "user",
+                "content": user_message
+            }
+        )
 
         response = client.chat.completions.create(
             model="gpt-5.4-mini",
             temperature=0.3,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are Kartavya's personal AI assistant."
-                        "You are intelligent, concise, and practical."
-                    )
-                },
-
-                {
-                    "role": "user",
-                    "content": user_message
-                }
-            ]
+            messages=messages
         )
 
         return response.choices[0].message.content

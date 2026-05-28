@@ -1,9 +1,13 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-
 from openai import AsyncOpenAI
-
 from app.core.config import settings
+from app.memory.conversation_memory import (
+    add_message,
+    get_history,
+    clear_history
+)
+from app.services.ai_service import AIService
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
@@ -19,31 +23,45 @@ Available commands:
 
 /start - Start the bot
 /help - Show available commands
+/reset - Clear all stored conversation memory
 """
 
     await update.message.reply_text(help_text)
 
+async def reset_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
-async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+
+    clear_history(user_id)
+
+    await update.message.reply_text("Conversation memory cleared.")
+
+async def message_handler(
+        update: Update,
+        context: ContextTypes.DEFAULT_TYPE
+):
+
+    user_id = update.effective_user.id
 
     user_message = update.message.text
 
-    client = AsyncOpenAI(
-        api_key=settings.OPENAI_API_KEY
+    history = get_history(user_id)
+
+    ai_reply = await AIService.generate_response(
+        user_message=user_message,
+        history=history
     )
 
-    response = await client.chat.completions.create(
-
-        model="gpt-5.4-mini",
-
-        messages=[
-            {
-                "role": "user",
-                "content": user_message
-            }
-        ]
+    add_message(
+        user_id,
+        "user",
+        user_message
     )
 
-    ai_reply = response.choices[0].message.content
+    add_message(
+        user_id,
+        "assistant",
+        ai_reply
+    )
 
     await update.message.reply_text(ai_reply)
