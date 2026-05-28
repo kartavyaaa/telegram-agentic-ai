@@ -1,3 +1,9 @@
+import asyncio
+
+asyncio.set_event_loop_policy(
+    asyncio.WindowsSelectorEventLoopPolicy()
+)
+
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -7,13 +13,17 @@ from telegram.ext import (
 
 from app.bot.handlers import (
     start_command,
-    message_handler
+    message_handler,
+    help_command
 )
 
 from app.core.config import settings
 
+import sys
+print(sys.executable)
 
 def main():
+
 
     app = (
         Application.builder()
@@ -22,6 +32,7 @@ def main():
     )
 
     app.add_handler(CommandHandler("start", start_command))
+    app.add_handler(CommandHandler("help", help_command))
 
     app.add_handler(
         MessageHandler(
