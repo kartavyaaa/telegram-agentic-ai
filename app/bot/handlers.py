@@ -8,6 +8,38 @@ from app.memory.conversation_memory import (
     clear_history
 )
 from app.services.ai_service import AIService
+from app.services.agent_service import AgentService
+from app.services.rag_service import (
+    RAGService
+)
+
+async def rag_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    if not context.args:
+
+        await update.message.reply_text(
+            "Usage: /rag <question>"
+        )
+
+        return
+
+    question = " ".join(
+        context.args
+    )
+
+    answer = (
+        await RAGService
+        .answer_question(
+            question
+        )
+    )
+
+    await update.message.reply_text(
+        answer
+    )
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
@@ -24,6 +56,7 @@ Available commands:
 /start - Start the bot
 /help - Show available commands
 /reset - Clear all stored conversation memory
+/rag <question> - Search your knowledge base
 """
 
     await update.message.reply_text(help_text)
@@ -47,7 +80,7 @@ async def message_handler(
 
     history = get_history(user_id)
 
-    ai_reply = await AIService.generate_response(
+    ai_reply = await AgentService.process_message(
         user_message=user_message,
         history=history
     )
