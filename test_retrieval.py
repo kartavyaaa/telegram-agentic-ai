@@ -1,9 +1,7 @@
 from app.rag.retriever import (
-    retrieve_context
+    get_available_sources
 )
 
-results = retrieve_context(
-    "some question"
+print(
+    get_available_sources()
 )
-
-print(results)

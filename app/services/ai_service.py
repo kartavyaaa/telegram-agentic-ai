@@ -198,3 +198,45 @@ class AIService:
         return response.choices[
             0
         ].message.content
+    
+    @staticmethod
+    async def extract_document_name(
+        user_message: str,
+        available_sources: list
+    ) -> str:
+
+        response = client.chat.completions.create(
+
+            model="gpt-5.4-mini",
+
+            messages=[
+                {
+                    "role": "system",
+                    "content":
+                    f"""
+                    Choose the most relevant document.
+
+                    Available documents:
+
+                    {available_sources}
+
+                    Return ONLY the document name.
+
+                    If none match, return:
+
+                    none
+                    """
+                },
+                {
+                    "role": "user",
+                    "content": user_message
+                }
+            ]
+        )
+
+        return (
+            response
+            .choices[0]
+            .message.content
+            .strip()
+        )

@@ -60,13 +60,19 @@ def ingest_pdf(
 
         collection.add(
             ids=[
-                f"{filename}_{idx}"
-            ],
+            f"{filename}_{idx}"
+        ],
 
-            documents=[
-                chunk
-            ]
-        )
+        documents=[
+            chunk
+        ],
+
+        metadatas=[
+            {
+                "source": filename
+            }
+        ]
+    )
 
     print(
         f"Ingested {len(chunks)} chunks"
