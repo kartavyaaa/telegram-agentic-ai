@@ -13,6 +13,9 @@ from app.services.rag_service import (
     RAGService
 )
 
+from pathlib import Path
+from app.rag.ingest import ingest_pdf
+
 async def rag_command(
     update: Update,
     context: ContextTypes.DEFAULT_TYPE
@@ -98,3 +101,50 @@ async def message_handler(
     )
 
     await update.message.reply_text(ai_reply)
+
+async def document_handler(
+        update: Update,
+        context: ContextTypes.DEFAULT_TYPE
+):
+
+    print("Document Handler Triggered")
+    document = update.message.document
+    print(document)
+
+    if not document:
+        return
+
+    if not document.file_name.lower().endswith(
+        ".pdf"
+    ):
+
+        await update.message.reply_text(
+            "Only PDF files are supported."
+        )
+
+        return
+
+    telegram_file = (
+        await document.get_file()
+    )
+
+    save_path = (
+        Path("data/documents")
+        / document.file_name
+    )
+
+    await telegram_file.download_to_drive(
+        custom_path=str(save_path)
+    )
+
+    await update.message.reply_text(
+        "PDF received. Ingesting..."
+    )
+
+    ingest_pdf(
+        str(save_path)
+    )
+
+    await update.message.reply_text(
+        "Document added to knowledge base."
+    )

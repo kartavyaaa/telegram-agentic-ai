@@ -16,7 +16,8 @@ from app.bot.handlers import (
     start_command,
     message_handler,
     help_command,
-    rag_command
+    rag_command,
+    document_handler
 )
 
 from app.core.config import settings
@@ -40,13 +41,8 @@ def main():
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("reset", reset_command))
     app.add_handler(CommandHandler("rag", rag_command))
-
-    app.add_handler(
-        MessageHandler(
-            filters.TEXT & ~filters.COMMAND,
-            message_handler
-        )
-    )
+    app.add_handler(MessageHandler(filters.Document.PDF,document_handler))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,message_handler))
 
     print("Bot is running...")
 
