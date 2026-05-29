@@ -16,6 +16,10 @@ from app.services.rag_service import (
 from pathlib import Path
 from app.rag.ingest import ingest_pdf
 
+from app.utils.telegram_utils import (
+    send_long_message
+)
+
 async def rag_command(
     update: Update,
     context: ContextTypes.DEFAULT_TYPE
@@ -99,8 +103,11 @@ async def message_handler(
         "assistant",
         ai_reply
     )
-
-    await update.message.reply_text(ai_reply)
+    
+    await send_long_message(
+        update,
+        ai_reply
+    )
 
 async def document_handler(
         update: Update,

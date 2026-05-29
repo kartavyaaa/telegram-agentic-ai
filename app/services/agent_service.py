@@ -72,5 +72,18 @@ class AgentService:
             return await RAGService.answer_question(
                 user_message
             )
+        
+        elif tool_name == "autonomous_workflow":
+
+            from app.services.autonomous_workflow_service import (
+                AutonomousWorkflowService
+            )
+
+            return await (
+                AutonomousWorkflowService
+                .run(
+                    user_message
+                )
+            )
 
         return None

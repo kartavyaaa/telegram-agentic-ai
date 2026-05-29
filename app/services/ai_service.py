@@ -85,11 +85,22 @@ class AIService:
                 notes
                 knowledge base
 
+                Use autonomous_workflow for:
+                - comparisons
+                - research tasks
+                - analysis tasks
+                - recommendations
+                - "best" questions
+                - evaluating options
+                - decision-making
+                - multi-step investigations
+
                 Return ONLY one word:
 
                 calculator
                 web_search
                 rag_search
+                autonomous_workflow
                 none
                 """
             },
@@ -267,7 +278,13 @@ class AIService:
 
                     Review all gathered information.
 
-                    Produce one final answer.
+                    Produce a concise final answer.
+
+                    Keep responses under 2500 characters.
+
+                    Use bullet points for Headings and numbering for sub-points.
+
+                    Focus on the most important findings.
 
                     Compare, analyze, and recommend
                     when appropriate.

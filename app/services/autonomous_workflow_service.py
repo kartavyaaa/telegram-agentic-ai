@@ -28,6 +28,7 @@ class AutonomousWorkflowService:
         user_question: str
     ):
 
+        print("AUTONOMOUS WORKFLOW STARTED")
         plan = (
             await PlannerService
             .create_plan(
