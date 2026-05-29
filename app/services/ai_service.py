@@ -240,3 +240,57 @@ class AIService:
             .message.content
             .strip()
         )
+    
+    @staticmethod
+    async def synthesize_results(
+        user_question: str,
+        workflow_results: list
+    ):
+
+        context = "\n\n".join(
+            [
+                result["result"]
+                for result in workflow_results
+            ]
+        )
+
+        response = client.chat.completions.create(
+
+            model="gpt-5.4-mini",
+
+            messages=[
+                {
+                    "role": "system",
+                    "content":
+                    """
+                    You are an expert analyst.
+
+                    Review all gathered information.
+
+                    Produce one final answer.
+
+                    Compare, analyze, and recommend
+                    when appropriate.
+                    """
+                },
+                {
+                    "role": "user",
+                    "content":
+                    f"""
+                    Original Question:
+
+                    {user_question}
+
+                    Research Results:
+
+                    {context}
+                    """
+                }
+            ]
+        )
+
+        return (
+            response
+            .choices[0]
+            .message.content
+        )
