@@ -27,6 +27,10 @@ print(sys.executable)
 
 from app.memory.database import initialize_database
 
+from app.utils.error_handler import (
+    global_error_handler
+)
+
 def main():
 
     initialize_database()
@@ -43,7 +47,7 @@ def main():
     app.add_handler(CommandHandler("rag", rag_command))
     app.add_handler(MessageHandler(filters.Document.PDF,document_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,message_handler))
-
+    app.add_error_handler(global_error_handler)
     print("Bot is running...")
 
     app.run_polling()
