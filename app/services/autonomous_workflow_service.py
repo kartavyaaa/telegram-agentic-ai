@@ -18,17 +18,25 @@ from app.services.ai_service import (
     AIService
 )
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class AutonomousWorkflowService:
 
     MAX_ITERATIONS = 3
+    MAX_RESULTS = 20
 
     @staticmethod
     async def run(
         user_question: str
     ):
 
-        print("AUTONOMOUS WORKFLOW STARTED")
+        logger.info(
+            "AUTONOMOUS WORKFLOW STARTED"
+        )
+
         plan = (
             await PlannerService
             .create_plan(
@@ -51,8 +59,12 @@ class AutonomousWorkflowService:
             )
 
             all_results.extend(
-                results
+                results                    
             )
+
+            if len(all_results) > (AutonomousWorkflowService.MAX_RESULTS):
+                
+                break
 
             decision = (
                 await ObserverService
@@ -62,10 +74,8 @@ class AutonomousWorkflowService:
                 )
             )
 
-            print(
-                f"Iteration "
-                f"{iteration + 1}: "
-                f"{decision}"
+            logger.info(
+                f"Iteration {iteration + 1}: {decision}"
             )
 
             if decision == "sufficient":

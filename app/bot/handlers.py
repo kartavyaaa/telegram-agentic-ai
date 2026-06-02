@@ -76,6 +76,15 @@ async def reset_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("Conversation memory cleared.")
 
+
+from app.core.request_timer import (
+    RequestTimer
+)
+
+import logging
+
+logger = logging.getLogger(__name__)
+
 async def message_handler(
         update: Update,
         context: ContextTypes.DEFAULT_TYPE
@@ -84,12 +93,19 @@ async def message_handler(
     user_id = update.effective_user.id
 
     user_message = update.message.text
+    
+    timer = RequestTimer()
 
     history = get_history(user_id)
 
     ai_reply = await AgentService.process_message(
         user_message=user_message,
         history=history
+    )
+
+    logger.info(
+        f"Request completed in "
+        f"{timer.elapsed()}s"
     )
 
     add_message(
@@ -104,10 +120,18 @@ async def message_handler(
         ai_reply
     )
     
-    await send_long_message(
-        update,
-        ai_reply
-    )
+    try:
+
+        await send_long_message(
+            update,
+            ai_reply
+        )
+
+    except Exception as e:
+
+        logger.exception(
+            f"Failed to send response: {e}"
+        )
 
 async def document_handler(
         update: Update,

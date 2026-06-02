@@ -1,0 +1,439 @@
+2026-06-02 04:33:31,545 | INFO | __main__ | Bot is running...
+2026-06-02 04:33:32,581 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getMe "HTTP/1.1 200 OK"
+2026-06-02 04:33:32,948 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/deleteWebhook "HTTP/1.1 200 OK"
+2026-06-02 04:33:32,948 | INFO | telegram.ext.Application | Application started
+2026-06-02 04:33:43,905 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:33:54,222 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:04,474 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:11,026 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:14,145 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:34:14,169 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 04:34:15,402 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 04:34:16,876 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:34:22,904 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-06-02 04:34:26,094 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-06-02 04:34:27,624 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:34:27,626 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-02 04:34:33,513 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:34:33,660 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:34,787 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/sendMessage "HTTP/1.1 200 OK"
+2026-06-02 04:34:43,901 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:44,148 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:34:44,148 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 04:34:44,148 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 04:39:16,728 | INFO | __main__ | Bot is running...
+2026-06-02 04:39:18,183 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getMe "HTTP/1.1 200 OK"
+2026-06-02 04:39:18,773 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/deleteWebhook "HTTP/1.1 200 OK"
+2026-06-02 04:39:18,781 | INFO | telegram.ext.Application | Application started
+2026-06-02 04:39:29,653 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:39:40,044 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:39:50,333 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:39:50,559 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:39:50,567 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 04:39:50,567 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 04:43:45,396 | INFO | __main__ | Bot is running...
+2026-06-02 04:43:46,499 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getMe "HTTP/1.1 200 OK"
+2026-06-02 04:43:46,846 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/deleteWebhook "HTTP/1.1 200 OK"
+2026-06-02 04:43:46,855 | INFO | telegram.ext.Application | Application started
+2026-06-02 04:43:55,309 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:43:59,261 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:43:59,275 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 04:44:00,179 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:44:01,269 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/sendMessage "HTTP/1.1 200 OK"
+2026-06-02 04:44:10,467 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:16,221 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:17,749 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-02 04:44:17,749 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 04:44:19,065 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 04:44:19,065 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 25, in process_message
+    return await AgentService.execute_tool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 87, in execute_tool
+    return await (
+           ^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\autonomous_workflow_service.py", line 40, in run
+    await PlannerService
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\planner_service.py", line 18, in create_plan
+    response = create_chat_completion(
+               ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'create_chat_completion' is not defined
+2026-06-02 04:44:20,212 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/sendMessage "HTTP/1.1 200 OK"
+2026-06-02 04:44:29,325 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:39,563 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:50,109 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:55,766 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:44:56,795 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/sendMessage "HTTP/1.1 200 OK"
+2026-06-02 04:45:06,192 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:45:06,447 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8848189212:AAGQ201HOKFR3VTEbtTLmyHZCmrIFLVqNlo/getUpdates "HTTP/1.1 200 OK"
+2026-06-02 04:45:06,463 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 04:45:06,463 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 04:47:12,332 | INFO | __main__ | Bot is running...
+2026-06-02 04:47:13,583 | INFO | telegram.ext.Application | Application started
+2026-06-02 04:47:26,864 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 04:47:32,979 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 04:47:34,341 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 04:47:34,341 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 25, in process_message
+    return await AgentService.execute_tool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 87, in execute_tool
+    return await (
+           ^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\autonomous_workflow_service.py", line 40, in run
+    await PlannerService
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\planner_service.py", line 18, in create_plan
+    response = create_chat_completion(
+               ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'create_chat_completion' is not defined
+2026-06-02 04:47:44,863 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 04:47:44,863 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 04:58:49,922 | INFO | __main__ | Bot is running...
+2026-06-02 04:58:58,698 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:00:44,276 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 05:00:57,480 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 05:00:57,518 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 05:00:59,704 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 25, in process_message
+    return await AgentService.execute_tool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 87, in execute_tool
+    return await (
+           ^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\autonomous_workflow_service.py", line 54, in run
+    await WorkflowService
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\workflow_service.py", line 36, in execute_plan
+    await asyncio.gather(
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\tools\web_search_tool.py", line 12, in search
+    response = client.responses.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+2026-06-02 05:01:22,844 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:01:22,856 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 05:07:54,939 | INFO | __main__ | Bot is running...
+2026-06-02 05:08:01,318 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:08:37,672 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 05:08:51,073 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 05:08:51,090 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 05:09:02,409 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-02 05:09:12,074 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:09:12,074 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 05:14:48,364 | INFO | __main__ | Bot is running...
+2026-06-02 05:14:50,376 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:15:30,921 | INFO | app.core.usage_tracker | chat_completion | prompt=209 | completion=4 | total=213
+2026-06-02 05:15:30,921 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 05:15:31,884 | INFO | app.core.usage_tracker | chat_completion | prompt=100 | completion=6 | total=106
+2026-06-02 05:15:43,560 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 05:15:43,560 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 05:15:43,576 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 05:15:44,993 | INFO | app.core.usage_tracker | chat_completion | prompt=111 | completion=98 | total=209
+2026-06-02 05:15:50,773 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9175
+2026-06-02 05:15:51,262 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9156
+2026-06-02 05:15:55,820 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=13768
+2026-06-02 05:15:56,724 | INFO | app.core.usage_tracker | chat_completion | prompt=2885 | completion=5 | total=2890
+2026-06-02 05:15:56,726 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-02 05:16:01,843 | INFO | app.core.usage_tracker | chat_completion | prompt=2921 | completion=588 | total=3509
+2026-06-02 05:16:37,006 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:16:37,006 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 05:25:24,127 | INFO | __main__ | Bot is running...
+2026-06-02 05:25:25,783 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:25:30,691 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-02 05:25:30,693 | WARNING | app.core.openai_client | OpenAI call failed (attempt 1/3): no such table: usage_logs
+2026-06-02 05:25:33,448 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-02 05:25:33,448 | WARNING | app.core.openai_client | OpenAI call failed (attempt 2/3): no such table: usage_logs
+2026-06-02 05:25:38,196 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-02 05:25:38,200 | WARNING | app.core.openai_client | OpenAI call failed (attempt 3/3): no such table: usage_logs
+2026-06-02 05:25:38,200 | ERROR | app.core.openai_client | OpenAI call failed permanently
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\core\openai_client.py", line 40, in create_chat_completion
+    log_usage(
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\core\usage_tracker.py", line 47, in log_usage
+    cursor.execute(
+sqlite3.OperationalError: no such table: usage_logs
+2026-06-02 05:25:38,202 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 16, in process_message
+    selected_tool = (await AIService.classify_tool(user_message)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\ai_service.py", line 109, in classify_tool
+    response = create_chat_completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\core\openai_client.py", line 40, in create_chat_completion
+    log_usage(
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\core\usage_tracker.py", line 47, in log_usage
+    cursor.execute(
+sqlite3.OperationalError: no such table: usage_logs
+2026-06-02 05:25:49,562 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:25:49,562 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 05:37:49,132 | INFO | __main__ | Bot is running...
+2026-06-02 05:37:51,368 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:38:02,311 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-02 05:38:02,338 | INFO | app.services.agent_service | Selected tool: none
+2026-06-02 05:38:03,810 | INFO | app.core.usage_tracker | chat_completion | prompt=1332 | completion=10 | total=1342
+2026-06-02 05:39:06,300 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:39:06,300 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 05:47:15,005 | INFO | __main__ | Bot is running...
+2026-06-02 05:47:16,633 | INFO | telegram.ext.Application | Application started
+2026-06-02 05:47:31,746 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-02 05:47:31,766 | INFO | app.services.agent_service | Selected tool: none
+2026-06-02 05:47:32,460 | INFO | app.core.usage_tracker | chat_completion | prompt=30 | completion=12 | total=42
+2026-06-02 05:47:53,449 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 05:47:53,457 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 06:02:54,511 | INFO | __main__ | Bot is running...
+2026-06-02 06:02:55,802 | INFO | telegram.ext.Application | Application started
+2026-06-02 06:03:17,476 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 06:03:17,506 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 06:03:17,544 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 06:03:18,921 | INFO | app.core.usage_tracker | chat_completion | prompt=111 | completion=68 | total=179
+2026-06-02 06:03:18,951 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 25, in process_message
+    return await AgentService.execute_tool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 87, in execute_tool
+    return await (
+           ^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\autonomous_workflow_service.py", line 55, in run
+    await WorkflowService
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\workflow_service.py", line 19, in execute_plan
+    :WorkflowService.MAX_STEPS
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'WorkflowService' has no attribute 'MAX_STEPS'
+2026-06-02 06:03:58,777 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 06:03:58,810 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 06:03:58,812 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 06:04:01,271 | INFO | app.core.usage_tracker | chat_completion | prompt=111 | completion=67 | total=178
+2026-06-02 06:04:01,302 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 90, in message_handler
+    ai_reply = await AgentService.process_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 25, in process_message
+    return await AgentService.execute_tool(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\agent_service.py", line 87, in execute_tool
+    return await (
+           ^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\autonomous_workflow_service.py", line 55, in run
+    await WorkflowService
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\services\workflow_service.py", line 19, in execute_plan
+    plan = plan[
+         ^^^^^^^^
+AttributeError: type object 'WorkflowService' has no attribute 'MAX_STEPS'
+2026-06-02 06:04:11,968 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 06:04:11,973 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 06:04:24,773 | INFO | __main__ | Bot is running...
+2026-06-02 06:04:26,067 | INFO | telegram.ext.Application | Application started
+2026-06-02 06:04:33,592 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 06:04:33,618 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 06:04:33,634 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 06:04:35,966 | INFO | app.core.usage_tracker | chat_completion | prompt=111 | completion=64 | total=175
+2026-06-02 06:04:44,674 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9266
+2026-06-02 06:04:44,686 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9347
+2026-06-02 06:04:45,836 | INFO | app.core.usage_tracker | chat_completion | prompt=1799 | completion=5 | total=1804
+2026-06-02 06:04:45,872 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-02 06:04:53,042 | INFO | app.core.usage_tracker | chat_completion | prompt=1835 | completion=725 | total=2560
+2026-06-02 06:05:15,223 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 06:05:15,263 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 06:05:15,263 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 06:05:17,020 | INFO | app.core.usage_tracker | chat_completion | prompt=111 | completion=93 | total=204
+2026-06-02 06:05:28,375 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=13564
+2026-06-02 06:05:39,122 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=21894
+2026-06-02 06:05:40,353 | INFO | app.core.usage_tracker | chat_completion | prompt=2064 | completion=11 | total=2075
+2026-06-02 06:05:40,380 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-02 06:05:47,016 | INFO | app.core.usage_tracker | chat_completion | prompt=2100 | completion=643 | total=2743
+2026-06-02 06:06:29,694 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 06:06:29,694 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 06:52:58,157 | INFO | __main__ | Bot is running...
+2026-06-02 06:52:59,385 | INFO | telegram.ext.Application | Application started
+2026-06-02 06:53:17,049 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-02 06:53:17,070 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-02 06:53:17,100 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-02 06:53:18,774 | INFO | app.core.usage_tracker | chat_completion | prompt=177 | completion=81 | total=258
+2026-06-02 06:53:25,940 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9129
+2026-06-02 06:53:31,371 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=14919
+2026-06-02 06:53:32,596 | INFO | app.core.usage_tracker | chat_completion | prompt=1334 | completion=5 | total=1339
+2026-06-02 06:53:32,621 | INFO | app.services.autonomous_workflow_service | Iteration 1: insufficient
+2026-06-02 06:53:34,794 | INFO | app.core.usage_tracker | chat_completion | prompt=1312 | completion=186 | total=1498
+2026-06-02 06:53:38,844 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=8800
+2026-06-02 06:53:42,941 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9206
+2026-06-02 06:53:56,947 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=21159
+2026-06-02 06:53:58,087 | INFO | app.core.usage_tracker | chat_completion | prompt=2962 | completion=5 | total=2967
+2026-06-02 06:53:58,118 | INFO | app.services.autonomous_workflow_service | Iteration 2: sufficient
+2026-06-02 06:54:04,750 | INFO | app.core.usage_tracker | chat_completion | prompt=2937 | completion=752 | total=3689
+2026-06-02 06:56:56,863 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 06:56:56,863 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 07:06:57,538 | INFO | __main__ | Bot is running...
+2026-06-02 07:07:00,554 | INFO | telegram.ext.Application | Application started
+2026-06-02 07:07:18,003 | INFO | app.core.usage_tracker | chat_completion | prompt=209 | completion=4 | total=213
+2026-06-02 07:07:18,042 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 07:07:19,593 | INFO | app.core.usage_tracker | chat_completion | prompt=100 | completion=6 | total=106
+2026-06-02 07:07:19,614 | INFO | app.bot.handlers | Request completed in 4.86s
+2026-06-02 07:07:25,749 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1315, in process_update
+    await coroutine
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\bot\handlers.py", line 123, in message_handler
+    await send_long_message(
+  File "C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\utils\telegram_utils.py", line 15, in send_long_message
+    await update.message.reply_text(
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_message.py", line 2106, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 3118, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 1123, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 630, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 820, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-06-02 07:07:42,861 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 07:07:42,863 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-02 07:11:09,850 | INFO | __main__ | Bot is running...
+2026-06-02 07:11:12,458 | INFO | telegram.ext.Application | Application started
+2026-06-02 07:11:27,404 | INFO | app.core.usage_tracker | chat_completion | prompt=209 | completion=4 | total=213
+2026-06-02 07:11:27,451 | INFO | app.services.agent_service | Selected tool: calculator
+2026-06-02 07:11:28,459 | INFO | app.core.usage_tracker | chat_completion | prompt=100 | completion=6 | total=106
+2026-06-02 07:11:28,482 | INFO | app.bot.handlers | Request completed in 3.82s
+2026-06-02 07:11:50,017 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-02 07:11:50,019 | INFO | telegram.ext.Application | Application.stop() complete

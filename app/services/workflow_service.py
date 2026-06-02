@@ -6,6 +6,7 @@ from app.tools.tool_registry import TOOLS
 
 class WorkflowService:
 
+    MAX_STEPS = 5
     @staticmethod
     async def execute_plan(
         plan_json: str
@@ -14,6 +15,10 @@ class WorkflowService:
         plan = json.loads(
             plan_json
         )
+
+        plan = plan[
+            :WorkflowService.MAX_STEPS
+        ]
 
         tasks = []
 

@@ -1,5 +1,8 @@
 from app.services.ai_service import AIService
 from app.tools.tool_registry import TOOLS
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class AgentService:
@@ -13,7 +16,9 @@ class AgentService:
         selected_tool = (await AIService.classify_tool(user_message)
         )
 
-        print(f"Selected tool: {selected_tool}")
+        logger.info(
+            f"Selected tool: {selected_tool}"
+        )
         
         if selected_tool != "none":
 

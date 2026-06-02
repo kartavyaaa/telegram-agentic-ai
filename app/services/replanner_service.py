@@ -1,12 +1,8 @@
-from openai import OpenAI
-
 from app.core.config import settings
-
-
-client = OpenAI(
-    api_key=settings.OPENAI_API_KEY
+from openai import OpenAI
+from app.core.openai_client import (
+    create_chat_completion
 )
-
 
 class ReplannerService:
 
@@ -23,7 +19,7 @@ class ReplannerService:
             ]
         )
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
 
             model="gpt-5.4-mini",
 

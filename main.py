@@ -31,7 +31,17 @@ from app.utils.error_handler import (
     global_error_handler
 )
 
+from app.core.logging_config import (
+    setup_logging
+)
+
+import logging
+
 def main():
+
+    setup_logging()
+
+    logger = logging.getLogger(__name__)
 
     initialize_database()
 
@@ -48,7 +58,11 @@ def main():
     app.add_handler(MessageHandler(filters.Document.PDF,document_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,message_handler))
     app.add_error_handler(global_error_handler)
-    print("Bot is running...")
+
+
+    logger.info(
+    "Bot is running..."
+)
 
     app.run_polling()
 

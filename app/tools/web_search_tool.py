@@ -1,25 +1,27 @@
-from openai import OpenAI
-
-from app.core.config import settings
-
-
-client = OpenAI(
-    api_key=settings.OPENAI_API_KEY
+from app.core.openai_client import (
+    create_response
 )
 
 
 class WebSearchTool:
 
     @staticmethod
-    def search(query: str):
+    def search(
+        query: str
+    ):
 
-        response = client.responses.create(
+        query = query[:300]
+        
+        response = create_response(
+
             model="gpt-5.4-mini",
+
             tools=[
                 {
                     "type": "web_search"
                 }
             ],
+
             input=query
         )
 

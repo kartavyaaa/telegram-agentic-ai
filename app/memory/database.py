@@ -4,6 +4,7 @@ import sqlite3
 DB_NAME = "memory.db"
 
 
+
 def get_connection():
 
     return sqlite3.connect(DB_NAME)
@@ -29,6 +30,24 @@ def initialize_database():
         )
     """)
 
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS usage_logs (
+
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+            operation TEXT,
+
+            prompt_tokens INTEGER,
+
+            completion_tokens INTEGER,
+
+            total_tokens INTEGER
+        )
+    """)
+
     conn.commit()
 
     conn.close()
+    

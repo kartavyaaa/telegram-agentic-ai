@@ -1,13 +1,12 @@
-from openai import OpenAI
 import sys
 print(sys.executable)
 from app.core.config import settings
 
-client = OpenAI(
-    api_key=
+from app.core.openai_client import (
+    create_chat_completion
 )
 
-response = client.chat.completions.create(
+response = create_chat_completion(
     model="gpt-5.4-mini",
     messages=[
         {

@@ -1,13 +1,9 @@
 from multiprocessing import context
 from urllib import response
-
-from openai import OpenAI
-
 from app.core.config import settings
-
-
-client = OpenAI(
-    api_key=settings.OPENAI_API_KEY
+from openai import OpenAI
+from app.core.openai_client import (
+    create_chat_completion
 )
 
 
@@ -39,7 +35,7 @@ class AIService:
             }
         )
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
             model="gpt-5.4-mini",
             temperature=0.3,
             messages=messages
@@ -110,7 +106,7 @@ class AIService:
             }
         ]
     
-        response = client.chat.completions.create(
+        response = create_chat_completion(
         model="gpt-5.4-mini",
         messages=messages
         )
@@ -151,7 +147,7 @@ class AIService:
             }
         ]
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
         model="gpt-5.4-mini",
         messages=messages
         )
@@ -175,7 +171,7 @@ class AIService:
             context_chunks
         )
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
             
             model="gpt-5.4-mini",
 
@@ -216,7 +212,7 @@ class AIService:
         available_sources: list
     ) -> str:
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
 
             model="gpt-5.4-mini",
 
@@ -265,7 +261,7 @@ class AIService:
             ]
         )
 
-        response = client.chat.completions.create(
+        response = create_chat_completion(
 
             model="gpt-5.4-mini",
 
