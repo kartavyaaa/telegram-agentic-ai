@@ -12,6 +12,9 @@ from app.services.agent_service import AgentService
 from app.services.rag_service import (
     RAGService
 )
+from app.scheduler.task_manager import (
+    TaskManager
+)   
 
 from pathlib import Path
 from app.rag.ingest import ingest_pdf
@@ -83,6 +86,9 @@ Available commands:
 /reset - Clear all stored conversation memory
 /rag <question> - Search your knowledge base
 /stats - View usage statistics
+/research daily 08:00 AI news
+/tasks - View scheduled tasks
+/deletetask <id> - Delete task
 """
 
     await update.message.reply_text(help_text)
@@ -206,4 +212,121 @@ async def document_handler(
 
     await update.message.reply_text(
         "Document added to knowledge base."
+    )
+
+async def research_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    if len(context.args) < 3:
+
+        await update.message.reply_text(
+            "Usage:\n"
+            "/research daily 08:00 AI news"
+        )
+
+        return
+
+    schedule_type = context.args[0]
+
+    schedule_value = context.args[1]
+
+    query = " ".join(
+        context.args[2:]
+    )
+
+    user_id = (
+        update.effective_user.id
+    )
+
+    TaskManager.create_task(
+        user_id=user_id,
+        query=query,
+        schedule_type=schedule_type,
+        schedule_value=schedule_value
+    )
+
+    await update.message.reply_text(
+        f"✅ Research task created\n\n"
+        f"Query: {query}\n"
+        f"Schedule: {schedule_type} "
+        f"{schedule_value}"
+    )
+
+
+async def tasks_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    user_id = (
+        update.effective_user.id
+    )
+
+    tasks = (
+        TaskManager.get_tasks(
+            user_id
+        )
+    )
+
+    if not tasks:
+
+        await update.message.reply_text(
+            "No scheduled tasks found."
+        )
+
+        return
+
+    response = (
+        "📋 Scheduled Tasks\n\n"
+    )
+
+    for (
+        task_id,
+        query,
+        schedule_type,
+        schedule_value
+    ) in tasks:
+
+        response += (
+            f"{task_id}. {query}\n"
+            f"   {schedule_type} "
+            f"{schedule_value}\n\n"
+        )
+
+    await update.message.reply_text(
+        response
+    )
+
+
+async def deletetask_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    if not context.args:
+
+        await update.message.reply_text(
+            "Usage:\n"
+            "/deletetask <task_id>"
+        )
+
+        return
+
+    task_id = int(
+        context.args[0]
+    )
+
+    user_id = (
+        update.effective_user.id
+    )
+
+    TaskManager.delete_task(
+        task_id,
+        user_id
+    )
+
+    await update.message.reply_text(
+        "✅ Task deleted"
     )

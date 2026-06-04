@@ -1,13 +1,12 @@
 import sqlite3
 
-
 DB_NAME = "memory.db"
-
 
 
 def get_connection():
 
     return sqlite3.connect(DB_NAME)
+
 
 def initialize_database():
 
@@ -47,7 +46,25 @@ def initialize_database():
         )
     """)
 
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS scheduled_tasks (
+
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            user_id INTEGER NOT NULL,
+
+            query TEXT NOT NULL,
+
+            schedule_type TEXT NOT NULL,
+
+            schedule_value TEXT NOT NULL,
+
+            last_run TEXT,
+
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
     conn.commit()
 
     conn.close()
-    

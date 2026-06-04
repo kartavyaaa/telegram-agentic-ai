@@ -20,7 +20,10 @@ from app.bot.handlers import (
     help_command,
     rag_command,
     document_handler,
-    stats_command
+    stats_command,
+    research_command,
+    tasks_command,
+    deletetask_command
 )
 
 from app.core.config import settings
@@ -63,11 +66,14 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,message_handler))
     app.add_error_handler(global_error_handler)
     app.add_handler(CommandHandler("stats",stats_command))
+    app.add_handler(CommandHandler("research",research_command))
+
+    app.add_handler(CommandHandler("tasks",tasks_command))
+
+    app.add_handler(CommandHandler("deletetask",deletetask_command))
 
 
-    logger.info(
-    "Bot is running..."
-)
+    logger.info("Bot is running..." )
 
     app.run_polling()
 
