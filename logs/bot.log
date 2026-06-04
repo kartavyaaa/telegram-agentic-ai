@@ -727,3 +727,65 @@ Traceback (most recent call last):
 telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
 2026-06-04 12:31:35,423 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
 2026-06-04 12:31:35,423 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-04 13:33:11,473 | INFO | __main__ | Bot is running...
+2026-06-04 13:33:12,301 | INFO | app.scheduler.research_runner | Research runner started
+2026-06-04 13:33:12,524 | INFO | telegram.ext.Application | Application started
+2026-06-04 13:33:17,387 | ERROR | app.utils.error_handler | Unhandled exception occurred
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-04 13:33:23,325 | ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py:338> exception=Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')>
+Traceback (most recent call last):
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4865, in get_updates
+    await self._post(
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eirrkaa\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-04 13:33:23,632 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-04 13:33:23,632 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-04 13:33:23,767 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<ResearchRunner.run() done, defined at C:\Users\eirrkaa\OneDrive - Ericsson\Desktop\telegram-agentic-ai\app\scheduler\research_runner.py:15> wait_for=<Future pending cb=[Task.task_wakeup()]>>

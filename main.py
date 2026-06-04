@@ -41,6 +41,9 @@ from app.core.logging_config import (
     setup_logging
 )
 
+from app.scheduler.research_runner import (
+    ResearchRunner
+)
 
 import logging
 
@@ -57,6 +60,15 @@ def main():
         .token(settings.TELEGRAM_BOT_TOKEN)
         .build()
     )
+    async def start_scheduler(application):
+
+        asyncio.create_task(
+            ResearchRunner.run()
+        )
+
+    app.post_init = start_scheduler
+
+    app.post_init = start_scheduler
 
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("help", help_command))
