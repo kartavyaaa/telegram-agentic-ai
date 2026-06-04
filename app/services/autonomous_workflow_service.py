@@ -18,6 +18,10 @@ from app.services.ai_service import (
     AIService
 )
 
+from app.core.usage_stats import (
+    get_total_tokens
+)
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -27,6 +31,7 @@ class AutonomousWorkflowService:
 
     MAX_ITERATIONS = 3
     MAX_RESULTS = 20
+    MAX_WORKFLOW_TOKENS = 50000
 
     @staticmethod
     async def run(
@@ -42,6 +47,10 @@ class AutonomousWorkflowService:
             .create_plan(
                 user_question
             )
+        )
+
+        starting_tokens = (
+            get_total_tokens()
         )
 
         all_results = []
@@ -65,6 +74,33 @@ class AutonomousWorkflowService:
             if len(all_results) > (AutonomousWorkflowService.MAX_RESULTS):
                 
                 break
+            
+            current_tokens = (
+                get_total_tokens()
+            )
+
+            workflow_tokens = (
+                current_tokens
+                - starting_tokens
+            )
+
+            logger.info(
+                f"Workflow tokens used: "
+                f"{workflow_tokens}"
+            )
+
+            if (
+                workflow_tokens
+                >= AutonomousWorkflowService
+                .MAX_WORKFLOW_TOKENS
+            ):
+
+                logger.warning(
+                    "Workflow token budget exceeded"
+                )
+
+                break
+
 
             decision = (
                 await ObserverService

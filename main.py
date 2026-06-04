@@ -17,7 +17,8 @@ from app.bot.handlers import (
     message_handler,
     help_command,
     rag_command,
-    document_handler
+    document_handler,
+    stats_command
 )
 
 from app.core.config import settings
@@ -34,6 +35,7 @@ from app.utils.error_handler import (
 from app.core.logging_config import (
     setup_logging
 )
+
 
 import logging
 
@@ -58,6 +60,7 @@ def main():
     app.add_handler(MessageHandler(filters.Document.PDF,document_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,message_handler))
     app.add_error_handler(global_error_handler)
+    app.add_handler(CommandHandler("stats",stats_command))
 
 
     logger.info(

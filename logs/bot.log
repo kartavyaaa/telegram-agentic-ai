@@ -437,3 +437,44 @@ telegram.error.TimedOut: Timed out
 2026-06-02 07:11:28,482 | INFO | app.bot.handlers | Request completed in 3.82s
 2026-06-02 07:11:50,017 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
 2026-06-02 07:11:50,019 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-04 04:13:16,499 | INFO | __main__ | Bot is running...
+2026-06-04 04:13:17,217 | INFO | telegram.ext.Application | Application started
+2026-06-04 04:13:27,312 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-04 04:13:27,340 | INFO | app.services.agent_service | Selected tool: none
+2026-06-04 04:13:28,235 | INFO | app.core.usage_tracker | chat_completion | prompt=2242 | completion=10 | total=2252
+2026-06-04 04:13:28,258 | INFO | app.bot.handlers | Request completed in 4.19s
+2026-06-04 04:13:51,584 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-04 04:13:51,632 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-04 04:13:51,739 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-04 04:13:53,406 | INFO | app.core.usage_tracker | chat_completion | prompt=177 | completion=84 | total=261
+2026-06-04 04:14:05,190 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=13958
+2026-06-04 04:14:18,793 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=36180
+2026-06-04 04:14:18,837 | INFO | app.services.autonomous_workflow_service | Workflow tokens used: 50138
+2026-06-04 04:14:18,839 | WARNING | app.services.autonomous_workflow_service | Workflow token budget exceeded
+2026-06-04 04:14:24,544 | INFO | app.core.usage_tracker | chat_completion | prompt=2446 | completion=709 | total=3155
+2026-06-04 04:14:24,569 | INFO | app.bot.handlers | Request completed in 34.24s
+2026-06-04 04:14:55,242 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-04 04:14:55,243 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-04 04:24:41,207 | INFO | __main__ | Bot is running...
+2026-06-04 04:24:42,121 | INFO | telegram.ext.Application | Application started
+2026-06-04 04:24:48,186 | INFO | app.core.usage_tracker | chat_completion | prompt=203 | completion=4 | total=207
+2026-06-04 04:24:48,219 | INFO | app.services.agent_service | Selected tool: none
+2026-06-04 04:24:49,401 | INFO | app.core.usage_tracker | chat_completion | prompt=794 | completion=12 | total=806
+2026-06-04 04:24:49,422 | INFO | app.bot.handlers | Request completed in 3.32s
+2026-06-04 04:24:58,791 | INFO | app.core.usage_tracker | chat_completion | prompt=213 | completion=7 | total=220
+2026-06-04 04:24:58,813 | INFO | app.services.agent_service | Selected tool: autonomous_workflow
+2026-06-04 04:24:58,840 | INFO | app.services.autonomous_workflow_service | AUTONOMOUS WORKFLOW STARTED
+2026-06-04 04:25:00,104 | INFO | app.core.usage_tracker | chat_completion | prompt=177 | completion=90 | total=267
+2026-06-04 04:25:08,970 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=9724
+2026-06-04 04:25:13,641 | INFO | app.core.usage_tracker | response_api | prompt=0 | completion=0 | total=22734
+2026-06-04 04:25:13,680 | INFO | app.services.autonomous_workflow_service | Workflow tokens used: 32458
+2026-06-04 04:25:14,409 | INFO | app.core.usage_tracker | chat_completion | prompt=2082 | completion=11 | total=2093
+2026-06-04 04:25:14,445 | INFO | app.services.autonomous_workflow_service | Iteration 1: sufficient
+2026-06-04 04:25:19,093 | INFO | app.core.usage_tracker | chat_completion | prompt=2057 | completion=679 | total=2736
+2026-06-04 04:25:19,133 | INFO | app.bot.handlers | Request completed in 21.21s
+2026-06-04 04:25:30,776 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-04 04:25:30,776 | INFO | telegram.ext.Application | Application.stop() complete
+2026-06-04 04:38:27,682 | INFO | __main__ | Bot is running...
+2026-06-04 04:38:28,377 | INFO | telegram.ext.Application | Application started
+2026-06-04 04:39:18,200 | INFO | telegram.ext.Application | Application is stopping. This might take a moment.
+2026-06-04 04:39:18,200 | INFO | telegram.ext.Application | Application.stop() complete

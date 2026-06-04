@@ -20,6 +20,24 @@ from app.utils.telegram_utils import (
     send_long_message
 )
 
+from app.services.stats_service import (
+    StatsService
+)
+
+async def stats_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    stats = (
+        StatsService
+        .get_stats()
+    )
+
+    await update.message.reply_text(
+        stats
+    )
+
 async def rag_command(
     update: Update,
     context: ContextTypes.DEFAULT_TYPE
@@ -64,6 +82,7 @@ Available commands:
 /help - Show available commands
 /reset - Clear all stored conversation memory
 /rag <question> - Search your knowledge base
+/stats - View usage statistics
 """
 
     await update.message.reply_text(help_text)
@@ -114,10 +133,19 @@ async def message_handler(
         user_message
     )
 
+    assistant_memory = ai_reply
+
+    if len(ai_reply) > 1000:
+
+        assistant_memory = (
+            ai_reply[:1000]
+            + "\n\n[TRUNCATED]"
+        )
+
     add_message(
         user_id,
         "assistant",
-        ai_reply
+        assistant_memory
     )
     
     try:

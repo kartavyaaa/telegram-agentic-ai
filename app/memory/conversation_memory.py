@@ -3,7 +3,7 @@ from app.memory.database import get_connection
 
 conversation_history = defaultdict(list)
 
-MAX_HISTORY = 10
+MAX_HISTORY = 4
 
 
 def add_message(user_id, role, content):
@@ -46,9 +46,9 @@ def get_history(user_id):
         FROM conversations
         WHERE user_id = ?
         ORDER BY id DESC
-        LIMIT 10
+        LIMIT ?
         """,
-        (user_id,)
+        (user_id, MAX_HISTORY)
     )
 
     rows = cursor.fetchall()
