@@ -109,7 +109,8 @@ class ResearchRunner:
                             task_id,
                             datetime.now().isoformat()
                         )
-
+                await AutoBriefingService.run()
+                
                 await asyncio.sleep(60)
 
             except Exception as e:
@@ -117,5 +118,4 @@ class ResearchRunner:
                 logger.exception(
                     f"Research runner error: {e}"
                 )
-                await AutoBriefingService.run()
                 await asyncio.sleep(60)
