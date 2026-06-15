@@ -17,6 +17,10 @@ from app.services.research_storage_service import (
 ResearchStorageService
 )
 
+from app.services.auto_briefing_service import (
+    AutoBriefingService
+)
+
 logger = logging.getLogger(__name__)
 
 class ResearchRunner:
@@ -113,5 +117,5 @@ class ResearchRunner:
                 logger.exception(
                     f"Research runner error: {e}"
                 )
-
+                await AutoBriefingService.run()
                 await asyncio.sleep(60)
