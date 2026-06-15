@@ -26,6 +26,23 @@ from app.utils.telegram_utils import (
 from app.services.stats_service import (
     StatsService
 )
+from app.services.briefing_service import (
+    BriefingService
+)
+
+async def briefing_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE
+):
+
+    briefing = (
+        BriefingService.generate()
+    )
+
+    await send_long_message(
+        update,
+        briefing
+    )
 
 async def stats_command(
     update: Update,
@@ -89,6 +106,7 @@ Available commands:
 /research daily 08:00 AI news
 /tasks - View scheduled tasks
 /deletetask <id> - Delete task
+/briefing - Generate daily briefing
 """
 
     await update.message.reply_text(help_text)

@@ -23,7 +23,8 @@ from app.bot.handlers import (
     stats_command,
     research_command,
     tasks_command,
-    deletetask_command
+    deletetask_command,
+    briefing_command
 )
 
 from app.core.config import settings
@@ -64,7 +65,7 @@ def main():
     )
 
     bot_context.application = app
-    
+
     async def start_scheduler(application):
 
         asyncio.create_task(
@@ -88,7 +89,7 @@ def main():
     app.add_handler(CommandHandler("tasks",tasks_command))
 
     app.add_handler(CommandHandler("deletetask",deletetask_command))
-
+    app.add_handler(CommandHandler("briefing",briefing_command))
 
     logger.info("Bot is running..." )
 
