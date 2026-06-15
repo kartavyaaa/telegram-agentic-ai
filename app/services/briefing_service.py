@@ -26,7 +26,6 @@ class BriefingService:
         combined_results = ""
 
         for (
-            task_id,
             query,
             result,
             created_at
