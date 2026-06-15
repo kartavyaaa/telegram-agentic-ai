@@ -7,6 +7,12 @@ from app.scheduler.task_manager import (
     TaskManager
 )
 
+from app.core import bot_context
+
+from app.services.autonomous_workflow_service import (
+    AutonomousWorkflowService
+)
+
 logger = logging.getLogger(__name__)
 
 
@@ -68,9 +74,17 @@ class ResearchRunner:
                             f"{task_id}: {query}"
                         )
 
-                        print(
-                            f"TASK DUE -> "
-                            f"{query}"
+                        result = await AutonomousWorkflowService.run(
+                            query
+                        )
+
+                        await bot_context.application.bot.send_message(
+                            chat_id=user_id,
+                            text=(
+                                f"🔔 Scheduled Research\n\n"
+                                f"Query: {query}\n\n"
+                                f"{result}"
+                            )
                         )
 
                         TaskManager.mark_task_run(
