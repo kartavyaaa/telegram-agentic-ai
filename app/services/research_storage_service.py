@@ -49,7 +49,6 @@ class ResearchStorageService:
         cursor.execute(
             """
             SELECT
-                task_id,
                 query,
                 result,
                 created_at
