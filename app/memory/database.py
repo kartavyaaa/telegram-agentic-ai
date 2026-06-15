@@ -64,7 +64,20 @@ def initialize_database():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS research_results (
 
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            task_id INTEGER NOT NULL,
+
+            query TEXT NOT NULL,
+
+            result TEXT NOT NULL,
+
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
     conn.commit()
 
     conn.close()

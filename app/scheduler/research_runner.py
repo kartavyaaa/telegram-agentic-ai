@@ -13,6 +13,10 @@ from app.services.autonomous_workflow_service import (
     AutonomousWorkflowService
 )
 
+from app.services.research_storage_service import (
+    ResearchStorageService
+)
+
 logger = logging.getLogger(__name__)
 
 
@@ -84,6 +88,12 @@ class ResearchRunner:
 
                         result = await AutonomousWorkflowService.run(
                             query
+                        )
+
+                        ResearchStorageService.save_result(
+                            task_id,
+                            query,
+                            result
                         )
 
                         logger.info(
