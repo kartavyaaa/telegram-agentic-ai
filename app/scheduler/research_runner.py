@@ -58,6 +58,14 @@ class ResearchRunner:
                         last_run
                     ) = task
 
+                    if last_run:
+
+                        logger.info(
+                            f"Task {task_id} already executed"
+                        )
+
+                        continue
+
                     logger.info(
                         f"Checking task "
                         f"{task_id}: "
@@ -76,6 +84,14 @@ class ResearchRunner:
 
                         result = await AutonomousWorkflowService.run(
                             query
+                        )
+
+                        logger.info(
+                            f"Research completed: {query}"
+                        )
+
+                        logger.info(
+                            result[:500]
                         )
 
                         await bot_context.application.bot.send_message(
