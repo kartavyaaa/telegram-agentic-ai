@@ -24,7 +24,8 @@ from app.bot.handlers import (
     research_command,
     tasks_command,
     deletetask_command,
-    briefing_command
+    briefing_command,
+    autobriefing_command
     
 )
 
@@ -91,6 +92,7 @@ def main():
 
     app.add_handler(CommandHandler("deletetask",deletetask_command))
     app.add_handler(CommandHandler("briefing",briefing_command))
+    app.add_handler(CommandHandler("autobriefing",autobriefing_command))
 
     logger.info("Bot is running..." )
 

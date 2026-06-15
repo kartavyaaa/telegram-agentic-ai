@@ -30,6 +30,54 @@ from app.services.briefing_service import (
     BriefingService
 )
 
+from app.services.briefing_preference_service import (
+    BriefingPreferenceService
+)
+
+async def autobriefing_command(
+    update,
+    context
+):
+
+    if not context.args:
+
+        await update.message.reply_text(
+            "Usage:\n"
+            "/autobriefing HH:MM"
+        )
+
+        return
+
+    user_id = (
+        update.effective_user.id
+    )
+
+    briefing_time = (
+        context.args[0]
+    )
+
+    parts = briefing_time.split(":")
+
+    if len(parts) == 2:
+
+        hour = int(parts[0])
+
+        minute = int(parts[1])
+
+        briefing_time = (
+            f"{hour:02d}:{minute:02d}"
+        )
+
+    BriefingPreferenceService.save(
+        user_id,
+        briefing_time
+    )
+
+    await update.message.reply_text(
+        f"✅ Auto briefing enabled\n\n"
+        f"Time: {briefing_time}"
+    )
+
 async def briefing_command(
     update,
     context
