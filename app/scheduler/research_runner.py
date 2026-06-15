@@ -33,6 +33,14 @@ class ResearchRunner:
                     .strftime("%H:%M")
                 )
 
+                logger.info(
+                    f"Current time: {current_time}"
+                )
+
+                logger.info(
+                    f"Found {len(tasks)} tasks"
+                )
+
                 for task in tasks:
 
                     (
@@ -43,6 +51,12 @@ class ResearchRunner:
                         schedule_value,
                         last_run
                     ) = task
+
+                    logger.info(
+                        f"Checking task "
+                        f"{task_id}: "
+                        f"{schedule_value}"
+                    )
 
                     if (
                         schedule_type == "daily"

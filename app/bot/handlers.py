@@ -232,6 +232,18 @@ async def research_command(
 
     schedule_value = context.args[1]
 
+    parts = schedule_value.split(":")
+
+    if len(parts) == 2:
+
+        hour = int(parts[0])
+
+        minute = int(parts[1])
+
+        schedule_value = (
+            f"{hour:02d}:{minute:02d}"
+        )
+
     query = " ".join(
         context.args[2:]
     )
