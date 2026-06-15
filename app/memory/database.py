@@ -78,6 +78,14 @@ def initialize_database():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS briefing_preferences (
+            user_id INTEGER PRIMARY KEY,
+            briefing_time TEXT NOT NULL,
+            last_sent DATE
+        )
+    """)
     conn.commit()
 
     conn.close()

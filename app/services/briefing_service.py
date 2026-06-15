@@ -2,11 +2,15 @@ from app.services.research_storage_service import (
     ResearchStorageService
 )
 
+from app.services.ai_service import (
+    AIService
+)
+
 
 class BriefingService:
 
     @staticmethod
-    def generate():
+    async def generate():
 
         results = (
             ResearchStorageService
@@ -19,20 +23,47 @@ class BriefingService:
                 "No research results found."
             )
 
-        briefing = (
-            "📰 Daily Briefing\n\n"
-        )
+        combined_results = ""
 
         for (
+            task_id,
             query,
             result,
             created_at
         ) in results:
 
-            briefing += (
-                f"📌 {query}\n\n"
-                f"{result[:300]}\n\n"
-                f"━━━━━━━━━━━━━━\n\n"
+            combined_results += (
+                f"\n\nTopic: {query}\n"
+                f"{result}\n"
             )
 
-        return briefing
+        prompt = f"""
+Create a concise executive briefing.
+
+Research Results:
+{combined_results}
+
+Format:
+
+📰 Daily Briefing
+
+🔥 Top Developments
+...
+
+📈 Trends
+...
+
+⚠ Risks
+...
+
+💡 Opportunities
+...
+
+🎯 Key Takeaways
+...
+"""
+
+        return await AIService.generate_response(
+            prompt,
+            []
+        )

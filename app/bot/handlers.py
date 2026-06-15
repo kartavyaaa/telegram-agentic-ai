@@ -31,16 +31,15 @@ from app.services.briefing_service import (
 )
 
 async def briefing_command(
-    update: Update,
-    context: ContextTypes.DEFAULT_TYPE
+    update,
+    context
 ):
 
-    briefing = (
+    briefing = await (
         BriefingService.generate()
     )
 
-    await send_long_message(
-        update,
+    await update.message.reply_text(
         briefing
     )
 
@@ -107,6 +106,7 @@ Available commands:
 /tasks - View scheduled tasks
 /deletetask <id> - Delete task
 /briefing - Generate daily briefing
+/autobriefing HH:MM
 """
 
     await update.message.reply_text(help_text)

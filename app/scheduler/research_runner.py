@@ -4,21 +4,20 @@ import logging
 from datetime import datetime
 
 from app.scheduler.task_manager import (
-    TaskManager
+TaskManager
 )
 
 from app.core import bot_context
 
 from app.services.autonomous_workflow_service import (
-    AutonomousWorkflowService
+AutonomousWorkflowService
 )
 
 from app.services.research_storage_service import (
-    ResearchStorageService
+ResearchStorageService
 )
 
 logger = logging.getLogger(__name__)
-
 
 class ResearchRunner:
 
@@ -63,18 +62,7 @@ class ResearchRunner:
                     ) = task
 
                     if last_run:
-
-                        logger.info(
-                            f"Task {task_id} already executed"
-                        )
-
                         continue
-
-                    logger.info(
-                        f"Checking task "
-                        f"{task_id}: "
-                        f"{schedule_value}"
-                    )
 
                     if (
                         schedule_type == "daily"
